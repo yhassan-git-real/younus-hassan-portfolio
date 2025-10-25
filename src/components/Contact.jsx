@@ -16,44 +16,22 @@ const Contact = () => {
     });
   };
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState('');
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('');
-
-    try {
-      // Using Formspree to send emails
-      const response = await fetch('https://formspree.io/f/xeoqgwgo', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          _replyto: formData.email,
-        }),
-      });
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        alert('Thank you for your message! I will get back to you soon.');
-      } else {
-        setSubmitStatus('error');
-        alert('Oops! Something went wrong. Please try again or email me directly.');
-      }
-    } catch (error) {
-      setSubmitStatus('error');
-      alert('Oops! Something went wrong. Please try again or email me directly.');
-    } finally {
-      setIsSubmitting(false);
-    }
+    
+    // Create mailto link with form data
+    const mailtoLink = `mailto:yhassan.official04@gmail.com?subject=${encodeURIComponent(formData.subject || 'Contact from Portfolio')}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    )}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    alert('Opening your email client. If it doesn\'t open, please email me directly at yhassan.official04@gmail.com');
+    
+    // Clear form
+    setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
   const contactInfo = [
@@ -246,23 +224,11 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="w-full btn-primary flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full btn-primary flex items-center justify-center space-x-2"
                 >
-                  <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                  <span>Send Message</span>
                   <FiSend size={18} />
                 </button>
-                
-                {submitStatus === 'success' && (
-                  <p className="text-green-400 text-center text-sm">
-                    ✓ Message sent successfully!
-                  </p>
-                )}
-                {submitStatus === 'error' && (
-                  <p className="text-red-400 text-center text-sm">
-                    ✗ Failed to send. Please email me directly at yhassan.official04@gmail.com
-                  </p>
-                )}
               </form>
             </div>
           </div>
