@@ -4,6 +4,19 @@ import { FiDatabase, FiServer, FiTrendingUp, FiShield, FiZap, FiExternalLink } f
 const Projects = () => {
   const projects = [
     {
+      title: 'SQL Server Database Migration 2016 to 2022',
+      description: 'Successfully executed large-scale database migration from SQL Server 2016 to 2022, ensuring minimal downtime, data integrity, and seamless transition for production environments.',
+      icon: <FiServer size={28} />,
+      color: 'from-emerald-500 to-emerald-700',
+      technologies: ['SQL Server 2016', 'SQL Server 2022', 'Migration', 'Backup & Recovery', 'T-SQL'],
+      highlights: [
+        'Migrated multiple production databases',
+        'Achieved minimal downtime during cutover',
+        'Ensured complete data integrity',
+        'Validated compatibility and performance',
+      ],
+    },
+    {
       title: 'SA Password Rotation Automation',
       description: 'Automated SA password rotation across 100+ SQL Server instances using PowerShell and T-SQL, eliminating manual effort and improving security compliance across the organization.',
       icon: <FiShield size={28} />,
