@@ -61,8 +61,8 @@ const Hero = () => {
               Get In Touch
             </a>
             <a 
-              href="/Younus_Hassan_Resume.pdf" 
-              download="Younus_Hassan_Resume.pdf"
+              href="/Younus_Hassan_Resume_MS-SQL_DBA.pdf" 
+              download="Younus_Hassan_Resume_MS-SQL_DBA.pdf"
               className="btn-primary flex items-center space-x-2"
             >
               <FiDownload size={18} />

@@ -142,8 +142,8 @@ const Contact = () => {
               
               {/* Download Resume Button */}
               <a 
-                href="/Younus_Hassan_Resume.pdf" 
-                download="Younus_Hassan_Resume.pdf"
+                href="/Younus_Hassan_Resume_MS-SQL_DBA.pdf" 
+                download="Younus_Hassan_Resume_MS-SQL_DBA.pdf"
                 className="w-full btn-primary flex items-center justify-center space-x-2 relative z-10"
               >
                 <FiDownload size={18} />
