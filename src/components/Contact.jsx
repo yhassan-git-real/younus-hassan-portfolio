@@ -1,0 +1,208 @@
+import React, { useState } from 'react';
+import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiGithub, FiSend } from 'react-icons/fi';
+
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you would typically send the form data to a backend service
+    console.log('Form submitted:', formData);
+    alert('Thank you for your message! I will get back to you soon.');
+    setFormData({ name: '', email: '', subject: '', message: '' });
+  };
+
+  const contactInfo = [
+    {
+      icon: <FiMail size={24} />,
+      label: 'Email',
+      value: 'younus.hassan@example.com',
+      href: 'mailto:younus.hassan@example.com',
+      color: 'from-blue-500 to-blue-700',
+    },
+    {
+      icon: <FiPhone size={24} />,
+      label: 'Phone',
+      value: '+91 XXXXX XXXXX',
+      href: 'tel:+91XXXXXXXXXX',
+      color: 'from-purple-500 to-purple-700',
+    },
+    {
+      icon: <FiMapPin size={24} />,
+      label: 'Location',
+      value: 'India',
+      href: '#',
+      color: 'from-pink-500 to-pink-700',
+    },
+    {
+      icon: <FiLinkedin size={24} />,
+      label: 'LinkedIn',
+      value: 'linkedin.com/in/younus-hassan',
+      href: 'https://linkedin.com/in/younus-hassan',
+      color: 'from-cyan-500 to-cyan-700',
+    },
+  ];
+
+  return (
+    <section id="contact" className="relative py-20 bg-slate-900/50">
+      <div className="section-container">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Get In <span className="gradient-text">Touch</span>
+          </h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-4"></div>
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+            I'm always open to discussing new projects, opportunities, or collaborations
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-8">
+          {/* Contact Info */}
+          <div className="lg:col-span-1 space-y-6">
+            <div className="gradient-border p-6">
+              <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+              <div className="space-y-4">
+                {contactInfo.map((info, index) => (
+                  <a
+                    key={index}
+                    href={info.href}
+                    className="flex items-start space-x-4 p-4 rounded-lg bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 group"
+                    target={info.label === 'LinkedIn' ? '_blank' : '_self'}
+                    rel={info.label === 'LinkedIn' ? 'noopener noreferrer' : ''}
+                  >
+                    <div className={`flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br ${info.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                      {info.icon}
+                    </div>
+                    <div className="flex-grow">
+                      <div className="text-sm text-slate-400">{info.label}</div>
+                      <div className="text-slate-200 font-medium break-all">{info.value}</div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Additional Info */}
+            <div className="gradient-border p-6">
+              <h3 className="text-xl font-bold text-white mb-4">Available For</h3>
+              <ul className="space-y-2">
+                <li className="flex items-center space-x-2 text-slate-400">
+                  <span className="text-green-400">●</span>
+                  <span>Full-time Opportunities</span>
+                </li>
+                <li className="flex items-center space-x-2 text-slate-400">
+                  <span className="text-green-400">●</span>
+                  <span>Contract Projects</span>
+                </li>
+                <li className="flex items-center space-x-2 text-slate-400">
+                  <span className="text-green-400">●</span>
+                  <span>Consulting Services</span>
+                </li>
+                <li className="flex items-center space-x-2 text-slate-400">
+                  <span className="text-green-400">●</span>
+                  <span>Technical Discussions</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="lg:col-span-2">
+            <div className="gradient-border p-8">
+              <h3 className="text-2xl font-bold text-white mb-6">Send Me a Message</h3>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
+                      Your Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
+                      placeholder="John Doe"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+                      Your Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
+                      placeholder="john@example.com"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-slate-300 mb-2">
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
+                    placeholder="How can I help you?"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows="6"
+                    className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 resize-none"
+                    placeholder="Your message here..."
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full btn-primary flex items-center justify-center space-x-2"
+                >
+                  <span>Send Message</span>
+                  <FiSend size={18} />
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
