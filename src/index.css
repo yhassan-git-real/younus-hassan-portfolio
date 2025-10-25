@@ -18,12 +18,27 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Prevent horizontal scroll on mobile */
+    overflow-x: hidden;
   }
   
   body {
     @apply bg-slate-950 text-slate-100;
     margin: 0;
     min-height: 100vh;
+    /* Prevent horizontal scroll on mobile */
+    overflow-x: hidden;
+    /* Better text rendering on mobile */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Improve touch targets on mobile */
+  @media (max-width: 768px) {
+    a, button {
+      min-height: 44px;
+      min-width: 44px;
+    }
   }
 }
 
@@ -50,6 +65,62 @@
     @apply px-6 py-2.5 border-2 border-blue-500 rounded-lg font-semibold text-blue-400 
            transition-all duration-200 hover:bg-blue-500/10 hover:border-blue-400 
            hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  /* macOS Terminal Dots */
+  .mac-dot {
+    @apply w-3 h-3 rounded-full relative transition-all duration-300;
+  }
+  
+  .mac-dot-red {
+    @apply bg-red-500 hover:shadow-[0_0_12px_rgba(239,68,68,0.8)];
+    animation: mac-pulse-red 3s ease-in-out infinite;
+  }
+  
+  .mac-dot-yellow {
+    @apply bg-yellow-500 hover:shadow-[0_0_12px_rgba(234,179,8,0.8)];
+    animation: mac-pulse-yellow 3s ease-in-out 1s infinite;
+  }
+  
+  .mac-dot-green {
+    @apply bg-green-500 hover:shadow-[0_0_12px_rgba(34,197,94,0.8)];
+    animation: mac-pulse-green 3s ease-in-out 2s infinite;
+  }
+  
+  .mac-dot:hover {
+    @apply scale-110;
+  }
+  
+  .mac-dot:active {
+    @apply scale-95;
+  }
+}
+
+/* macOS Terminal Dot Animations */
+@keyframes mac-pulse-red {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(239, 68, 68, 0);
+  }
+  50% {
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.6);
+  }
+}
+
+@keyframes mac-pulse-yellow {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(234, 179, 8, 0);
+  }
+  50% {
+    box-shadow: 0 0 8px rgba(234, 179, 8, 0.6);
+  }
+}
+
+@keyframes mac-pulse-green {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(34, 197, 94, 0);
+  }
+  50% {
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
   }
 }
 

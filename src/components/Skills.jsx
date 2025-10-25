@@ -86,15 +86,15 @@ const Skills = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 gap-6 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-10">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="gradient-border p-5 hover:scale-[1.01] transition-all duration-200"
+              className="gradient-border p-4 sm:p-5 hover:scale-[1.01] transition-all duration-200"
             >
               {/* Category Header */}
-              <div className="flex items-center space-x-3 mb-6">
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center`}>
+              <div className="flex items-center space-x-2 sm:space-x-3 mb-4 sm:mb-6">
+                <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center flex-shrink-0`}>
                   {category.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white">{category.category}</h3>

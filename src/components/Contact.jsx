@@ -86,12 +86,12 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Contact Info */}
-          <div className="lg:col-span-1 space-y-6">
-            <div className="gradient-border p-6">
-              <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
-              <div className="space-y-4">
+          <div className="lg:col-span-1 space-y-4 sm:space-y-6">
+            <div className="gradient-border p-4 sm:p-6">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Contact Information</h3>
+              <div className="space-y-3 sm:space-y-4">
                 {contactInfo.map((info, index) => {
                   const isExternal = info.label === 'LinkedIn' || info.label === 'Naukri Profile';
                   const isClickable = info.href !== '#';

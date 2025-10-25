@@ -98,14 +98,14 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="gradient-border p-5 group hover:scale-[1.02] transition-all duration-200"
+              className="gradient-border p-4 sm:p-5 group hover:scale-[1.02] transition-all duration-200"
             >
               {/* Icon */}
-              <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${project.color} flex items-center justify-center mb-3 group-hover:scale-105 transition-transform duration-200`}>
+              <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br ${project.color} flex items-center justify-center mb-3 group-hover:scale-105 transition-transform duration-200`}>
                 {project.icon}
               </div>
 

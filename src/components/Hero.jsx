@@ -14,7 +14,7 @@ const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight px-2">
             Hi, I'm{' '}
             <span className="gradient-text">
               Younus Hassan
@@ -22,13 +22,13 @@ const Hero = () => {
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl sm:text-2xl md:text-3xl text-slate-400 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-slate-400 max-w-3xl mx-auto px-4">
             Crafting robust database solutions with{' '}
             <span className="text-purple-400 font-semibold">3+ years</span> of expertise
           </p>
 
           {/* Description */}
-          <p className="text-base sm:text-lg text-slate-500 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-slate-500 max-w-2xl mx-auto px-4">
             Specializing in MS SQL Server optimization, AWS RDS management, performance tuning, and 
             multi-database support at Tata Consultancy Services
           </p>
@@ -56,19 +56,19 @@ const Hero = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-6">
-            <a href="#contact" className="btn-primary">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 pt-6 px-4 max-w-lg mx-auto">
+            <a href="#contact" className="btn-primary w-full sm:w-auto text-center">
               Get In Touch
             </a>
             <a 
               href="/Younus_Hassan_Resume_MS-SQL_DBA.pdf" 
               download="Younus_Hassan_Resume_MS-SQL_DBA.pdf"
-              className="btn-primary flex items-center space-x-2"
+              className="btn-primary flex items-center justify-center space-x-2 w-full sm:w-auto"
             >
               <FiDownload size={18} />
               <span>Download Resume</span>
             </a>
-            <a href="#experience" className="btn-outline">
+            <a href="#experience" className="btn-outline w-full sm:w-auto text-center">
               View Experience
             </a>
           </div>

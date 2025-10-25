@@ -40,73 +40,81 @@ const Experience = () => {
         </div>
 
         {/* Experience Timeline */}
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-5xl mx-auto">
           {experiences.map((exp, index) => (
-            <div key={index} className="relative">
-              {/* Timeline Line */}
-              {index < experiences.length - 1 && (
-                <div className="absolute left-6 top-20 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-600 hidden md:block"></div>
-              )}
-
+            <div key={index} className="relative mb-8">
               {/* Experience Card */}
-              <div className="gradient-border p-5 md:p-6 hover:scale-[1.01] transition-all duration-200">
-                <div className="flex flex-col md:flex-row md:items-start gap-5">
-                  {/* Icon */}
-                  <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br ${exp.color} flex items-center justify-center`}>
-                    <FiBriefcase size={24} />
+              <div className="gradient-border overflow-hidden">
+                {/* Header Section with Gradient Background */}
+                <div className="relative bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 p-6 border-b border-slate-700/50">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                    <div className="flex items-start gap-4">
+                      {/* Icon */}
+                      <div className={`flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br ${exp.color} flex items-center justify-center shadow-lg`}>
+                        <FiBriefcase size={24} />
+                      </div>
+                      
+                      {/* Title & Company */}
+                      <div>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-1 leading-snug">
+                          {exp.position}
+                        </h3>
+                        <div className="text-base sm:text-lg text-blue-400 font-semibold">
+                          {exp.company}
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Meta Information */}
+                    <div className="flex flex-wrap gap-3 text-sm">
+                      <div className="flex items-center space-x-2 text-slate-300">
+                        <FiCalendar size={16} className="text-blue-400" />
+                        <span>{exp.duration}</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-slate-300">
+                        <FiMapPin size={16} className="text-purple-400" />
+                        <span>{exp.location}</span>
+                      </div>
+                      <div className="px-3 py-1 bg-blue-500/20 border border-blue-500/40 rounded-full text-blue-300 font-medium">
+                        {exp.type}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content Section */}
+                <div className="p-6 space-y-6">
+                  {/* Responsibilities */}
+                  <div>
+                    <h4 className="text-base sm:text-lg font-semibold text-slate-200 mb-3 sm:mb-4 flex items-center">
+                      <span className="w-1 h-5 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full mr-2 sm:mr-3"></span>
+                      Key Responsibilities
+                    </h4>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-3">
+                      {exp.responsibilities.map((resp, idx) => (
+                        <li key={idx} className="flex items-start space-x-2 sm:space-x-3 text-slate-400 text-xs sm:text-sm">
+                          <span className="text-purple-400 mt-1 flex-shrink-0">▹</span>
+                          <span className="leading-relaxed">{resp}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
 
-                  {/* Content */}
-                  <div className="flex-grow space-y-4">
-                    {/* Header */}
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-2">
-                        {exp.position}
-                      </h3>
-                      <div className="text-xl text-blue-400 font-semibold mb-3">
-                        {exp.company}
-                      </div>
-                      <div className="flex flex-wrap gap-4 text-sm text-slate-400">
-                        <div className="flex items-center space-x-2">
-                          <FiCalendar size={16} />
-                          <span>{exp.duration}</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <FiMapPin size={16} />
-                          <span>{exp.location}</span>
-                        </div>
-                        <div className="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400">
-                          {exp.type}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Responsibilities */}
-                    <div>
-                      <h4 className="text-lg font-semibold text-slate-300 mb-3">Key Responsibilities:</h4>
-                      <ul className="space-y-2">
-                        {exp.responsibilities.map((resp, idx) => (
-                          <li key={idx} className="flex items-start space-x-3 text-slate-400">
-                            <span className="text-purple-400 mt-1">▹</span>
-                            <span>{resp}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Technologies */}
-                    <div>
-                      <h4 className="text-lg font-semibold text-slate-300 mb-3">Technologies:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {exp.technologies.map((tech, idx) => (
-                          <span
-                            key={idx}
-                            className="px-3 py-1 bg-slate-800 text-slate-300 rounded-lg text-sm hover:bg-slate-700 transition-colors duration-300"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
+                  {/* Technologies */}
+                  <div>
+                    <h4 className="text-lg font-semibold text-slate-200 mb-4 flex items-center">
+                      <span className="w-1 h-5 bg-gradient-to-b from-purple-500 to-pink-600 rounded-full mr-3"></span>
+                      Technologies & Tools
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {exp.technologies.map((tech, idx) => (
+                        <span
+                          key={idx}
+                          className="px-3 py-1.5 bg-slate-800/80 text-slate-300 rounded-lg text-sm border border-slate-700/50 hover:border-blue-500/50 hover:bg-slate-700/80 transition-all duration-200"
+                        >
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>

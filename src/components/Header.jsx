@@ -69,13 +69,13 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 animate-slide-up">
+          <div className="md:hidden py-4 animate-slide-up bg-slate-900/98 backdrop-blur-md">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/50 transition-all duration-300"
+                className="block px-4 py-3 mx-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/70 transition-all duration-200 text-center"
               >
                 {item.name}
               </a>
