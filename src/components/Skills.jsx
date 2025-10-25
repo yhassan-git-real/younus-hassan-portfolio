@@ -1,6 +1,5 @@
 import React from 'react';
-import { FiDatabase, FiServer, FiCode, FiTool, FiGitBranch, FiCloud } from 'react-icons/fi';
-import { SiMicrosoftsqlserver, SiPowershell, SiPython, SiGit, SiMicrosoftazure } from 'react-icons/si';
+import { FiDatabase, FiServer, FiCode, FiTool, FiGitBranch, FiCloud, FiTerminal } from 'react-icons/fi';
 
 const Skills = () => {
   const skillCategories = [
@@ -9,7 +8,7 @@ const Skills = () => {
       icon: <FiDatabase size={24} />,
       color: 'from-blue-500 to-blue-700',
       skills: [
-        { name: 'MS SQL Server', level: 95, icon: <SiMicrosoftsqlserver /> },
+        { name: 'MS SQL Server', level: 95, icon: <FiDatabase /> },
         { name: 'T-SQL', level: 90 },
         { name: 'Database Design', level: 88 },
         { name: 'Query Optimization', level: 92 },
@@ -35,8 +34,8 @@ const Skills = () => {
       icon: <FiCode size={24} />,
       color: 'from-pink-500 to-pink-700',
       skills: [
-        { name: 'PowerShell', level: 85, icon: <SiPowershell /> },
-        { name: 'Python', level: 75, icon: <SiPython /> },
+        { name: 'PowerShell', level: 85, icon: <FiTerminal /> },
+        { name: 'Python', level: 75, icon: <FiCode /> },
         { name: 'T-SQL Scripting', level: 92 },
         { name: 'SSIS (ETL)', level: 80 },
         { name: 'Task Automation', level: 88 },
@@ -50,8 +49,8 @@ const Skills = () => {
       skills: [
         { name: 'SSMS', level: 95 },
         { name: 'SSRS', level: 78 },
-        { name: 'Azure SQL Database', level: 75, icon: <SiMicrosoftazure /> },
-        { name: 'Git', level: 82, icon: <SiGit /> },
+        { name: 'Azure SQL Database', level: 75, icon: <FiCloud /> },
+        { name: 'Git', level: 82, icon: <FiGitBranch /> },
         { name: 'SQL Profiler', level: 88 },
         { name: 'Extended Events', level: 85 },
       ],
