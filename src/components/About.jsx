@@ -80,7 +80,7 @@ const About = () => {
               at <span className="text-purple-400 font-semibold">Tata Consultancy Services (TCS)</span>. 
               I specialize in managing large-scale SQL Server environments across on-premises and 
               <span className="text-blue-400 font-semibold"> AWS cloud platforms</span>, with expertise in 
-              performance tuning, backup & recovery, and AWS Multi-AZ high availability setups.
+              performance tuning, backup & recovery, and high availability/disaster recovery solutions.
             </p>
 
             <p className="text-slate-400 text-lg leading-relaxed">

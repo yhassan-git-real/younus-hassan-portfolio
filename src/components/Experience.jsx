@@ -17,7 +17,6 @@ const Experience = () => {
         'Configured and managed backup jobs with point-in-time recovery across production environments',
         'Provided L1 operational support for MySQL, PostgreSQL, and Oracle databases including monitoring and security patching',
         'Automated routine DBA tasks using PowerShell and T-SQL scripts, reducing manual monitoring by 40%',
-        'Supported AWS RDS Multi-AZ (HA) setups and annual isolated disaster recovery exercises',
         'Delivered production deployments through ITIL-based change management processes',
         'Provided 24/7 on-call support for critical production databases, resolving incidents within SLAs',
       ],

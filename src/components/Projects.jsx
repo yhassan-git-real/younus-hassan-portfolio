@@ -56,16 +56,16 @@ const Projects = () => {
       ],
     },
     {
-      title: 'AWS Multi-AZ HA Implementation',
-      description: 'Gained hands-on experience with AWS RDS Multi-AZ (HA) setups for critical databases and supported annual isolated disaster recovery exercises to ensure business continuity.',
+      title: 'High Availability & Disaster Recovery',
+      description: 'Gained hands-on experience with AWS RDS HA setups for critical databases and supported annual isolated disaster recovery exercises to ensure business continuity.',
       icon: <FiServer size={28} />,
       color: 'from-green-500 to-green-700',
-      technologies: ['AWS RDS', 'Multi-AZ', 'HA', 'Disaster Recovery'],
+      technologies: ['AWS RDS', 'High Availability', 'Disaster Recovery', 'Business Continuity'],
       highlights: [
-        'AWS RDS Multi-AZ configuration',
+        'AWS RDS HA configuration',
         'High availability implementation',
-        'Disaster recovery planning',
-        'Business continuity support',
+        'Isolated DR exercise support',
+        'Business continuity planning',
       ],
     },
     {
