@@ -114,23 +114,29 @@ const Contact = () => {
             <div className="gradient-border p-6">
               <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
               <div className="space-y-4">
-                {contactInfo.map((info, index) => (
-                  <a
-                    key={index}
-                    href={info.href}
-                    className="flex items-start space-x-4 p-4 rounded-lg bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 group"
-                    target={info.label === 'LinkedIn' || info.label === 'Naukri Profile' ? '_blank' : '_self'}
-                    rel={info.label === 'LinkedIn' || info.label === 'Naukri Profile' ? 'noopener noreferrer' : ''}
-                  >
-                    <div className={`flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br ${info.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      {info.icon}
-                    </div>
-                    <div className="flex-grow">
-                      <div className="text-sm text-slate-400">{info.label}</div>
-                      <div className="text-slate-200 font-medium break-all">{info.value}</div>
-                    </div>
-                  </a>
-                ))}
+                {contactInfo.map((info, index) => {
+                  const isExternal = info.label === 'LinkedIn' || info.label === 'Naukri Profile';
+                  const isClickable = info.href !== '#';
+                  
+                  return (
+                    <a
+                      key={index}
+                      href={info.href}
+                      className="flex items-start space-x-4 p-4 rounded-lg bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 group relative z-10 cursor-pointer"
+                      target={isExternal ? '_blank' : '_self'}
+                      rel={isExternal ? 'noopener noreferrer' : undefined}
+                      onClick={!isClickable ? (e) => e.preventDefault() : undefined}
+                    >
+                      <div className={`flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br ${info.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                        {info.icon}
+                      </div>
+                      <div className="flex-grow">
+                        <div className="text-sm text-slate-400">{info.label}</div>
+                        <div className="text-slate-200 font-medium break-all">{info.value}</div>
+                      </div>
+                    </a>
+                  );
+                })}
               </div>
             </div>
 
@@ -162,7 +168,7 @@ const Contact = () => {
           <div className="lg:col-span-2">
             <div className="gradient-border p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Send Me a Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">

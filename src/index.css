@@ -113,4 +113,11 @@
   mask-composite: exclude;
   animation: gradient-rotate 3s ease infinite;
   background-size: 200% 200%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gradient-border > * {
+  position: relative;
+  z-index: 1;
 }
