@@ -56,19 +56,6 @@ const Projects = () => {
       ],
     },
     {
-      title: 'High Availability & Disaster Recovery',
-      description: 'Gained hands-on experience with AWS RDS HA setups for critical databases and supported annual isolated disaster recovery exercises to ensure business continuity.',
-      icon: <FiServer size={28} />,
-      color: 'from-green-500 to-green-700',
-      technologies: ['AWS RDS', 'High Availability', 'Disaster Recovery', 'Business Continuity'],
-      highlights: [
-        'AWS RDS HA configuration',
-        'High availability implementation',
-        'Isolated DR exercise support',
-        'Business continuity planning',
-      ],
-    },
-    {
       title: 'Monitoring & Alerting Automation',
       description: 'Implemented automated alerting systems for locked accounts, job failures, and critical reports, reducing manual monitoring effort by 40% and improving response times.',
       icon: <FiZap size={28} />,

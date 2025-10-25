@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiGithub, FiSend } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiGithub, FiSend, FiBriefcase } from 'react-icons/fi';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -28,21 +28,21 @@ const Contact = () => {
     {
       icon: <FiMail size={24} />,
       label: 'Email',
-      value: 'younus.hassan@example.com',
-      href: 'mailto:younus.hassan@example.com',
+      value: 'yhassan.official04@gmail.com',
+      href: 'mailto:yhassan.official04@gmail.com',
       color: 'from-blue-500 to-blue-700',
     },
     {
       icon: <FiPhone size={24} />,
       label: 'Phone',
-      value: '+91 XXXXX XXXXX',
-      href: 'tel:+91XXXXXXXXXX',
+      value: '+91-7903324228',
+      href: 'tel:+917903324228',
       color: 'from-purple-500 to-purple-700',
     },
     {
       icon: <FiMapPin size={24} />,
       label: 'Location',
-      value: 'India',
+      value: 'Kolkata, West Bengal',
       href: '#',
       color: 'from-pink-500 to-pink-700',
     },
@@ -50,8 +50,15 @@ const Contact = () => {
       icon: <FiLinkedin size={24} />,
       label: 'LinkedIn',
       value: 'linkedin.com/in/younus-hassan',
-      href: 'https://linkedin.com/in/younus-hassan',
+      href: 'https://www.linkedin.com/in/younus-hassan',
       color: 'from-cyan-500 to-cyan-700',
+    },
+    {
+      icon: <FiBriefcase size={24} />,
+      label: 'Naukri Profile',
+      value: 'View Profile',
+      href: 'https://www.naukri.com/mnjuser/profile?id=&altresid',
+      color: 'from-orange-500 to-orange-700',
     },
   ];
 
