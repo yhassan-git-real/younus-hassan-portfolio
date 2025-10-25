@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiGithub, FiSend, FiBriefcase } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiGithub, FiSend, FiBriefcase, FiDownload } from 'react-icons/fi';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -143,7 +143,7 @@ const Contact = () => {
             {/* Additional Info */}
             <div className="gradient-border p-6">
               <h3 className="text-xl font-bold text-white mb-4">Available For</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2 mb-6">
                 <li className="flex items-center space-x-2 text-slate-400">
                   <span className="text-green-400">●</span>
                   <span>Full-time Opportunities</span>
@@ -161,6 +161,16 @@ const Contact = () => {
                   <span>Technical Discussions</span>
                 </li>
               </ul>
+              
+              {/* Download Resume Button */}
+              <a 
+                href="/Younus_Hassan_Resume.pdf" 
+                download="Younus_Hassan_Resume.pdf"
+                className="w-full btn-primary flex items-center justify-center space-x-2 relative z-10"
+              >
+                <FiDownload size={18} />
+                <span>Download Resume</span>
+              </a>
             </div>
           </div>
 

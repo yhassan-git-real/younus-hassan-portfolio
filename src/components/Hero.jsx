@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiDatabase, FiServer, FiCode, FiArrowDown } from 'react-icons/fi';
+import { FiDatabase, FiServer, FiCode, FiArrowDown, FiDownload } from 'react-icons/fi';
 
 const Hero = () => {
   return (
@@ -59,6 +59,14 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
             <a href="#contact" className="btn-primary">
               Get In Touch
+            </a>
+            <a 
+              href="/Younus_Hassan_Resume.pdf" 
+              download="Younus_Hassan_Resume.pdf"
+              className="btn-primary flex items-center space-x-2"
+            >
+              <FiDownload size={18} />
+              <span>Download Resume</span>
             </a>
             <a href="#experience" className="btn-outline">
               View Experience
