@@ -5,24 +5,25 @@ const Experience = () => {
   const experiences = [
     {
       company: 'Tata Consultancy Services (TCS)',
-      position: 'MS SQL Database Administrator',
-      duration: '2021 - Present',
-      location: 'India',
+      position: 'System Engineer | MS SQL DBA',
+      duration: 'Dec 2021 - Present',
+      location: 'Kolkata, India',
       type: 'Full-time',
       responsibilities: [
-        'Manage and maintain MS SQL Server databases across multiple production environments',
-        'Implement performance tuning and optimization strategies, improving query execution by 40%',
-        'Design and execute backup and recovery procedures ensuring 99.9% data availability',
-        'Monitor database health, troubleshoot issues, and provide 24/7 on-call support',
-        'Implement security measures including encryption, access control, and compliance audits',
-        'Collaborate with development teams to optimize database design and queries',
-        'Automate routine DBA tasks using PowerShell and T-SQL scripts',
-        'Plan and execute database migrations and upgrades with zero downtime',
+        'Managed 200+ production and non-production SQL Server environments (2012-2022), including AWS RDS and EC2 instances',
+        'Reduced vulnerability exposure by 40% through rigorous monthly security patching across all database environments',
+        'Optimized database performance through execution plan analysis and index tuning, achieving 15% reduction in query response time',
+        'Performed SQL Server upgrades and migrations (2012/2014/2016 to 2019/2022) with zero downtime',
+        'Configured and managed backup jobs with point-in-time recovery across production environments',
+        'Provided L1 operational support for MySQL, PostgreSQL, and Oracle databases including monitoring and security patching',
+        'Automated routine DBA tasks using PowerShell and T-SQL scripts, reducing manual monitoring by 40%',
+        'Supported AWS RDS Multi-AZ (HA) setups and annual isolated disaster recovery exercises',
+        'Delivered production deployments through ITIL-based change management processes',
+        'Provided 24/7 on-call support for critical production databases, resolving incidents within SLAs',
       ],
-      technologies: ['MS SQL Server', 'T-SQL', 'PowerShell', 'SSMS', 'SSIS', 'SSRS', 'AlwaysOn', 'Replication'],
+      technologies: ['MS SQL Server', 'AWS RDS', 'AWS EC2', 'PowerShell', 'T-SQL', 'MySQL', 'PostgreSQL', 'Oracle', 'Terraform', 'ServiceNow'],
       color: 'from-blue-500 to-purple-600',
     },
-    // You can add more experiences here when you provide additional details
   ];
 
   return (

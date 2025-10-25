@@ -24,13 +24,13 @@ const Hero = () => {
           {/* Subheading */}
           <p className="text-xl sm:text-2xl md:text-3xl text-slate-400 max-w-3xl mx-auto">
             Crafting robust database solutions with{' '}
-            <span className="text-purple-400 font-semibold">4 years</span> of expertise
+            <span className="text-purple-400 font-semibold">3+ years</span> of expertise
           </p>
 
           {/* Description */}
           <p className="text-base sm:text-lg text-slate-500 max-w-2xl mx-auto">
-            Specializing in MS SQL Server optimization, performance tuning, and enterprise-scale 
-            database management at Tata Consultancy Services
+            Specializing in MS SQL Server optimization, AWS RDS management, performance tuning, and 
+            multi-database support at Tata Consultancy Services
           </p>
 
           {/* Icon Grid */}

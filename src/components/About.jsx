@@ -5,14 +5,14 @@ const About = () => {
   const stats = [
     {
       icon: <FiBriefcase size={24} />,
-      value: '4+',
+      value: '3+',
       label: 'Years Experience',
       color: 'from-blue-500 to-blue-700',
     },
     {
       icon: <FiCode size={24} />,
-      value: '100+',
-      label: 'Projects Completed',
+      value: '200+',
+      label: 'Servers Managed',
       color: 'from-purple-500 to-purple-700',
     },
     {
@@ -76,16 +76,18 @@ const About = () => {
             </div>
 
             <p className="text-slate-400 text-lg leading-relaxed">
-              I'm a dedicated MS SQL Database Administrator with nearly 4 years of hands-on experience 
+              I'm a dedicated MS SQL Server Database Administrator with 3+ years of hands-on experience 
               at <span className="text-purple-400 font-semibold">Tata Consultancy Services (TCS)</span>. 
-              My passion lies in optimizing database performance, ensuring data integrity, and implementing 
-              robust backup and recovery strategies.
+              I specialize in managing large-scale SQL Server environments across on-premises and 
+              <span className="text-blue-400 font-semibold"> AWS cloud platforms</span>, with expertise in 
+              performance tuning, backup & recovery, and AWS Multi-AZ high availability setups.
             </p>
 
             <p className="text-slate-400 text-lg leading-relaxed">
-              I specialize in database design, performance tuning, high availability solutions, and 
-              disaster recovery planning. My approach combines technical expertise with a deep 
-              understanding of business needs to deliver scalable and efficient database solutions.
+              I've successfully managed <span className="text-purple-400 font-semibold">200+ production and non-production servers</span>, 
+              including AWS RDS and EC2 instances. I also provide L1 operational support for 
+              <span className="text-pink-400 font-semibold"> MySQL, PostgreSQL, and Oracle</span> databases, focusing on 
+              security compliance, automation, and cross-functional collaboration.
             </p>
 
             {/* Stats Grid */}
