@@ -26,10 +26,10 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="relative py-20 bg-slate-950">
+    <section id="experience" className="relative py-16 bg-slate-950">
       <div className="section-container">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Work <span className="gradient-text">Experience</span>
           </h2>
@@ -49,8 +49,8 @@ const Experience = () => {
               )}
 
               {/* Experience Card */}
-              <div className="gradient-border p-6 md:p-8 hover:scale-[1.02] transition-all duration-300">
-                <div className="flex flex-col md:flex-row md:items-start gap-6">
+              <div className="gradient-border p-5 md:p-6 hover:scale-[1.01] transition-all duration-200">
+                <div className="flex flex-col md:flex-row md:items-start gap-5">
                   {/* Icon */}
                   <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br ${exp.color} flex items-center justify-center`}>
                     <FiBriefcase size={24} />

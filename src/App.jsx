@@ -22,7 +22,7 @@ function App() {
       <BackgroundAnimation />
       
       {/* Main Content */}
-      <div className={`relative z-10 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+      <div className={`relative z-10 transition-opacity duration-700 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
         <Header />
         <main>
           <Hero />

@@ -71,10 +71,10 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="relative py-20 bg-slate-950">
+    <section id="projects" className="relative py-16 bg-slate-950">
       <div className="section-container">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Key <span className="gradient-text">Projects</span>
           </h2>
@@ -85,14 +85,14 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="gradient-border p-6 group hover:scale-105 transition-all duration-300"
+              className="gradient-border p-5 group hover:scale-[1.02] transition-all duration-200"
             >
               {/* Icon */}
-              <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${project.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${project.color} flex items-center justify-center mb-3 group-hover:scale-105 transition-transform duration-200`}>
                 {project.icon}
               </div>
 

@@ -3,10 +3,10 @@ import { FiDatabase, FiServer, FiCode, FiArrowDown, FiDownload } from 'react-ico
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-16 db-grid-bg">
+    <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 pb-12 db-grid-bg">
       {/* Content */}
-      <div className="section-container text-center">
-        <div className="space-y-8 animate-fade-in">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="space-y-6 animate-fade-in">
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400 text-sm animate-slide-up">
             <FiDatabase className="animate-pulse" />
@@ -34,9 +34,9 @@ const Hero = () => {
           </p>
 
           {/* Icon Grid */}
-          <div className="flex items-center justify-center gap-6 pt-6">
+          <div className="flex items-center justify-center gap-4 pt-4">
             <div className="group flex flex-col items-center space-y-2">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-200 shadow-lg">
                 <FiDatabase size={28} />
               </div>
               <span className="text-xs text-slate-400">Database</span>
@@ -56,7 +56,7 @@ const Hero = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-6">
             <a href="#contact" className="btn-primary">
               Get In Touch
             </a>

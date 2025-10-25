@@ -29,7 +29,7 @@
 
 @layer components {
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16;
   }
   
   .gradient-text {
@@ -41,15 +41,15 @@
   }
   
   .btn-primary {
-    @apply px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold 
-           text-white transition-all duration-300 hover:from-blue-700 hover:to-purple-700 
-           hover:shadow-lg hover:scale-105 active:scale-95;
+    @apply px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold 
+           text-white transition-all duration-200 hover:from-blue-700 hover:to-purple-700 
+           hover:shadow-lg hover:scale-[1.02] active:scale-[0.98];
   }
   
   .btn-outline {
-    @apply px-8 py-3 border-2 border-blue-500 rounded-lg font-semibold text-blue-400 
-           transition-all duration-300 hover:bg-blue-500/10 hover:border-blue-400 
-           hover:scale-105 active:scale-95;
+    @apply px-6 py-2.5 border-2 border-blue-500 rounded-lg font-semibold text-blue-400 
+           transition-all duration-200 hover:bg-blue-500/10 hover:border-blue-400 
+           hover:scale-[1.02] active:scale-[0.98];
   }
 }
 
@@ -94,8 +94,15 @@
 
 .gradient-border {
   position: relative;
-  background: linear-gradient(145deg, rgba(30, 58, 138, 0.2), rgba(124, 58, 237, 0.2));
+  background: linear-gradient(145deg, rgba(30, 58, 138, 0.15), rgba(124, 58, 237, 0.15));
   border-radius: 1rem;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  transition: all 0.3s ease;
+}
+
+.gradient-border:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  background: linear-gradient(145deg, rgba(30, 58, 138, 0.25), rgba(124, 58, 237, 0.25));
 }
 
 .gradient-border::before {
@@ -106,15 +113,20 @@
   right: 0;
   bottom: 0;
   border-radius: 1rem;
-  padding: 2px;
+  padding: 1px;
   background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
-  animation: gradient-rotate 3s ease infinite;
-  background-size: 200% 200%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
   pointer-events: none;
   z-index: 0;
+}
+
+.gradient-border:hover::before {
+  opacity: 0.6;
 }
 
 .gradient-border > * {

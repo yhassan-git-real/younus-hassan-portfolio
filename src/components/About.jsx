@@ -24,9 +24,9 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="relative py-20 bg-slate-900/50">
+    <section id="about" className="relative py-16 bg-slate-900/50">
       <div className="section-container">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Left Column - Image/Illustration */}
           <div className="relative">
             <div className="relative gradient-border p-8 rounded-2xl">
@@ -91,11 +91,11 @@ const About = () => {
             </p>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-3 gap-4 pt-6">
+            <div className="grid grid-cols-3 gap-3 pt-4">
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="text-center p-4 rounded-xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105"
+                  className="text-center p-3 rounded-xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-200 hover:scale-[1.02]"
                 >
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br ${stat.color} mb-2`}>
                     {stat.icon}

@@ -73,10 +73,10 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="relative py-20 bg-slate-900/50">
+    <section id="contact" className="relative py-16 bg-slate-900/50">
       <div className="section-container">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Get In <span className="gradient-text">Touch</span>
           </h2>

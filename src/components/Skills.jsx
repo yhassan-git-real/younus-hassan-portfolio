@@ -72,10 +72,10 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="relative py-20 bg-slate-900/50">
+    <section id="skills" className="relative py-16 bg-slate-900/50">
       <div className="section-container">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Technical <span className="gradient-text">Skills</span>
           </h2>
@@ -86,11 +86,11 @@ const Skills = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-6 mb-10">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="gradient-border p-6 hover:scale-[1.02] transition-all duration-300"
+              className="gradient-border p-5 hover:scale-[1.01] transition-all duration-200"
             >
               {/* Category Header */}
               <div className="flex items-center space-x-3 mb-6">
@@ -116,8 +116,8 @@ const Skills = () => {
         </div>
 
         {/* Additional Skills */}
-        <div className="gradient-border p-8">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">
+        <div className="gradient-border p-6">
+          <h3 className="text-2xl font-bold text-white mb-5 text-center">
             Additional <span className="gradient-text">Competencies</span>
           </h3>
           <div className="flex flex-wrap justify-center gap-3">

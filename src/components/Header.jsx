@@ -51,7 +51,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="px-4 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/50 transition-all duration-300"
+                className="px-4 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/50 transition-all duration-200"
               >
                 {item.name}
               </a>
