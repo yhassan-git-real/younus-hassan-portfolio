@@ -13,7 +13,7 @@ const Experience = () => {
         'Managed 200+ production and non-production SQL Server environments (2012-2022), including AWS RDS and EC2 instances',
         'Reduced vulnerability exposure by 40% through rigorous monthly security patching across all database environments',
         'Optimized database performance through execution plan analysis and index tuning, achieving 15% reduction in query response time',
-        'Performed SQL Server upgrades and migrations (2012/2014/2016 to 2019/2022) with zero downtime',
+        'Performed SQL Server upgrades and migrations (2012/2014/2016 to 2019/2022) with minimal downtime',
         'Configured and managed backup jobs with point-in-time recovery across production environments',
         'Provided L1 operational support for MySQL, PostgreSQL, and Oracle databases including monitoring and security patching',
         'Automated routine DBA tasks using PowerShell and T-SQL scripts, reducing manual monitoring by 40%',
