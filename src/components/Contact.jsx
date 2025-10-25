@@ -16,12 +16,44 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to a backend service
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! I will get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSubmitting(true);
+    setSubmitStatus('');
+
+    try {
+      // Using Formspree to send emails
+      const response = await fetch('https://formspree.io/f/xeoqgwgo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          _replyto: formData.email,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        alert('Thank you for your message! I will get back to you soon.');
+      } else {
+        setSubmitStatus('error');
+        alert('Oops! Something went wrong. Please try again or email me directly.');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      alert('Oops! Something went wrong. Please try again or email me directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -87,8 +119,8 @@ const Contact = () => {
                     key={index}
                     href={info.href}
                     className="flex items-start space-x-4 p-4 rounded-lg bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 group"
-                    target={info.label === 'LinkedIn' ? '_blank' : '_self'}
-                    rel={info.label === 'LinkedIn' ? 'noopener noreferrer' : ''}
+                    target={info.label === 'LinkedIn' || info.label === 'Naukri Profile' ? '_blank' : '_self'}
+                    rel={info.label === 'LinkedIn' || info.label === 'Naukri Profile' ? 'noopener noreferrer' : ''}
                   >
                     <div className={`flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br ${info.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                       {info.icon}
@@ -198,11 +230,23 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full btn-primary flex items-center justify-center space-x-2"
+                  disabled={isSubmitting}
+                  className="w-full btn-primary flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <span>Send Message</span>
+                  <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                   <FiSend size={18} />
                 </button>
+                
+                {submitStatus === 'success' && (
+                  <p className="text-green-400 text-center text-sm">
+                    ✓ Message sent successfully!
+                  </p>
+                )}
+                {submitStatus === 'error' && (
+                  <p className="text-red-400 text-center text-sm">
+                    ✗ Failed to send. Please email me directly at yhassan.official04@gmail.com
+                  </p>
+                )}
               </form>
             </div>
           </div>
