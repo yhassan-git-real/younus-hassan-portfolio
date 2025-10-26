@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FiAward, FiBriefcase, FiCode } from 'react-icons/fi';
+import DatabaseHealthMonitor from './DatabaseHealthMonitor';
+import DatabaseSchema from './DatabaseSchema';
+import PerformanceMetrics from './PerformanceMetrics';
 
 const About = () => {
   const [showQuery, setShowQuery] = useState(false);
@@ -99,9 +102,9 @@ const About = () => {
                 {!showQuery && !isExecuting && (
                   <div className="bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-lg p-4 mb-4 border border-blue-500/30">
                     <p className="text-slate-300 text-sm text-center leading-relaxed">
-                      <span className="text-yellow-400 font-semibold">🔍 Looking for a Proactive DBA?</span>
+                      <span className="text-yellow-400 font-semibold">🔍 Seeking a Skilled Database Professional?</span>
                       <br />
-                      <span className="text-slate-400 italic">Hit that Execute button and watch the magic happen! 🎯</span>
+                      <span className="text-slate-400 italic">Execute the query to discover your ideal DBA match! 🎯</span>
                     </p>
                   </div>
                 )}
@@ -171,14 +174,27 @@ const About = () => {
                         <span className="text-slate-400">(0.003s)</span>
                       </div>
                       <div className="space-y-2">
-                        <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg border border-blue-500/30">
-                          <span className="text-3xl">🎯</span>
-                          <span className="text-white font-bold text-lg animate-pulse">Younus Hassan</span>
-                          <span className="text-3xl animate-bounce">😃</span>
+                        <div className="p-3 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg border border-blue-500/30">
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="text-white font-bold text-lg">Hello!</span>
+                            <span className="text-3xl animate-wave">👋</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="text-white font-bold text-lg">I'm Younus Hassan</span>
+                            <span className="text-3xl animate-bounce" style={{ animationDelay: '0.3s' }}>😎</span>
+                          </div>
+                        </div>
+                        <div className="text-xs text-purple-400 pl-3 flex items-center gap-2 italic">
+                          <span>🛡️</span>
+                          <span>Your Database Guardian</span>
                         </div>
                         <div className="text-xs text-cyan-400 pl-3 flex items-center gap-2">
                           <span>→</span>
                           <span>MS SQL Server DBA | TCS | Enterprise-Scale</span>
+                        </div>
+                        <div className="text-xs text-green-400 pl-3 flex items-center gap-2 animate-pulse">
+                          <span>🌟</span>
+                          <span className="font-semibold">Available for exciting DBA opportunities!</span>
                         </div>
                         <div className="text-xs text-amber-400 pl-3 flex items-start gap-2">
                           <span className="text-base flex-shrink-0 mt-0.5">💡</span>
@@ -300,6 +316,20 @@ const About = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Additional Interactive Sections */}
+        <div className="grid lg:grid-cols-2 gap-8 mt-8">
+          {/* Database Health Monitor */}
+          <DatabaseHealthMonitor />
+          
+          {/* Performance Metrics */}
+          <PerformanceMetrics />
+        </div>
+
+        {/* Database Schema - Full Width */}
+        <div className="mt-8">
+          <DatabaseSchema />
         </div>
       </div>
     </section>

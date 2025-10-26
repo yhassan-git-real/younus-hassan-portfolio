@@ -29,7 +29,7 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-sm sm:text-base md:text-lg text-slate-500 max-w-2xl mx-auto px-4">
-            Specializing in MS SQL Server optimization, AWS RDS management, performance tuning, and 
+            Specializing in MS SQL Server optimization, AWS Cloud Management, performance tuning, and 
             multi-database support at Tata Consultancy Services
           </p>
 

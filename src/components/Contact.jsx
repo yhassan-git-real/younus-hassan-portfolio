@@ -86,12 +86,12 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
           {/* Contact Info */}
-          <div className="lg:col-span-1 space-y-4 sm:space-y-6">
-            <div className="gradient-border p-4 sm:p-6">
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Contact Information</h3>
-              <div className="space-y-3 sm:space-y-4">
+          <div className="h-full">
+            <div className="gradient-border p-6 h-full">
+              <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+              <div className="space-y-4">
                 {contactInfo.map((info, index) => {
                   const isExternal = info.label === 'LinkedIn' || info.label === 'Naukri Profile';
                   const isClickable = info.href !== '#';
@@ -117,47 +117,14 @@ const Contact = () => {
                 })}
               </div>
             </div>
-
-            {/* Additional Info */}
-            <div className="gradient-border p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Available For</h3>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center space-x-2 text-slate-400">
-                  <span className="text-green-400">●</span>
-                  <span>Full-time Opportunities</span>
-                </li>
-                <li className="flex items-center space-x-2 text-slate-400">
-                  <span className="text-green-400">●</span>
-                  <span>Contract Projects</span>
-                </li>
-                <li className="flex items-center space-x-2 text-slate-400">
-                  <span className="text-green-400">●</span>
-                  <span>Consulting Services</span>
-                </li>
-                <li className="flex items-center space-x-2 text-slate-400">
-                  <span className="text-green-400">●</span>
-                  <span>Technical Discussions</span>
-                </li>
-              </ul>
-              
-              {/* Download Resume Button */}
-              <a 
-                href="/Younus_Hassan_Resume_MS-SQL_DBA.pdf" 
-                download="Younus_Hassan_Resume_MS-SQL_DBA.pdf"
-                className="w-full btn-primary flex items-center justify-center space-x-2 relative z-10"
-              >
-                <FiDownload size={18} />
-                <span>Download Resume</span>
-              </a>
-            </div>
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <div className="gradient-border p-8">
+          <div className="h-full">
+            <div className="gradient-border p-6 h-full">
               <h3 className="text-2xl font-bold text-white mb-6">Send Me a Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
-                <div className="grid md:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-5 relative z-10">
+                <div className="grid md:grid-cols-2 gap-5">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
                       Your Name
@@ -216,7 +183,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows="6"
+                    rows="5"
                     className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 resize-none"
                     placeholder="Your message here..."
                   ></textarea>
@@ -224,10 +191,33 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full btn-primary flex items-center justify-center space-x-2"
+                  className="w-full btn-primary flex items-center justify-center space-x-2 relative overflow-hidden group"
+                  onMouseDown={(e) => {
+                    const button = e.currentTarget;
+                    const ripple = document.createElement('span');
+                    const rect = button.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.cssText = `
+                      position: absolute;
+                      width: ${size}px;
+                      height: ${size}px;
+                      left: ${x}px;
+                      top: ${y}px;
+                      background: rgba(255, 255, 255, 0.5);
+                      border-radius: 50%;
+                      pointer-events: none;
+                      animation: ripple 0.6s ease-out;
+                    `;
+                    
+                    button.appendChild(ripple);
+                    setTimeout(() => ripple.remove(), 600);
+                  }}
                 >
-                  <span>Send Message</span>
-                  <FiSend size={18} />
+                  <span className="relative z-10">Send Message</span>
+                  <FiSend size={18} className="relative z-10" />
                 </button>
               </form>
             </div>
