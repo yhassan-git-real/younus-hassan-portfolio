@@ -1,110 +1,84 @@
-## Page 1
 
-# Younus Hassan
-MS SQL Database Administrator
 
-📍 Kolkata, West Bengal | 📞 +91-7903324228 | 📧 yhassan.official04@gmail.com | 💻 linkedin.com/in/Younus Hassan
-
+## Younus Hassan
+SQL Database Administrator
+Kolkata, West Bengal7903324228yhassan.official04@gmail.comyhassan-profile-portfolio
+## Profile Links
+younus-hassan
+yhassan-git-real
 ## Professional Summary
-MS SQL Server Database Administrator with 3+ years of experience managing large-scale SQL Server environments across on-premises and AWS cloud platforms. Proficient in performance tuning, backup and recovery, AWS Multi AZ (HA), Isolated DR, and user access management. Skilled in automating database operations using PowerShell and T-SQL, with a strong focus on process optimization, security compliance, and cross-functional collaboration to improve system reliability and operational efficiency.
-
-## Experience
-### Tata Consultancy Service
-System Engineer | MS SQL DBA
-Dec 2021 – Present
-Kolkata
-* Installation, configuration, and maintaining **SQL Server 2012–2022** environments.
-* Managed **200+** production and non-production servers, including AWS Standalone EC2 and RDS instances.
-* Performed SQL Server **upgrades and migrations** (2012/2014/2016 to 2019/2022).
-* Reduced **vulnerability** exposure by 40% through rigorous monthly **security patching** of all SQL Server environments and other database instances.
-* Troubleshoot database **connectivity, blocking, deadlock and performance** issues for application teams.
-* Optimized database performance by analyzing execution plans, creating/modifying indexes, and tuning T-SQL queries, resulting in a **15% reduction** in query response time.
-* Configured and managed SQL Server **backup jobs**, including **point-in-time recovery** and scheduled maintenance plans across production environments.
-* Performed SQL Server database refresh activities across Dev, QA, and UAT environments by restoring backups, validating data integrity, and coordinating with application teams for successful completion.
-* Provided L1 operational support for **MySQL, PostgreSQL, and Oracle** database engines, covering monitoring, security patching, version upgrades via Terraform, and end-user issue resolution.
-* Monitored SQL Server instances for performance bottlenecks, disk space utilization, and error logs, proactively addressing issues to ensure system stability.
-* Automated routine DBA tasks using SQL Server Agent jobs and PowerShell scripts, improving operational efficiency.
-* Gained hands-on experience with AWS RDS Multi-AZ (HA) setups for critical databases and supported annual isolated disaster recovery exercises to ensure business continuity.
-* Delivered production deployments and performed infrastructure activities through **ITIL-based change management processes**, ensuring system stability and compliance.
-* Managed database security, including user and login creation, role assignments, and granting/revoking permissions based on business requirements.
-* Reduced manual monitoring by 40% by implementing **automated alerting** systems for locked accounts, job failures and critical reports.
-* Provided **24/7 on-call support** for critical production databases, resolving incidents within defined SLAs.
-
+SQL Server Database Administrator with 4+ years of experience supporting production databases across on-premises and AWS environments. Skilled in
+provisioning, upgrades, performance troubleshooting, backup/restore operations, and automation using PowerShell and T-SQL. Practical exposure to high
+availability setups, storage optimization, security administration, and compliance-driven operations. Also experienced in assisting multi-platform database
+environments including MySQL, PostgreSQL, and Oracle. Seeking opportunities to apply and expand my database automation, optimization, and cloud
+skills in environments that encourage problem-solving and operational excellence.
 ## Technical Skills
-### Database Technologies
-MS SQL Server 2008-2022, MySQL, Oracle 19c, PostgreSQL 16
-
-### Operating System
-Windows Servers, Basic Linux
-
-### Cloud & Tools
-AWS RDS, AWS EC2, AWS S3, Terraform, GitHub, AWS CloudWatch
-
-### Performance Tuning
-Query optimization, HA/DR, Index management, Execution plan analysis
-
-### Monitoring & Database Tools
-PgAdmin, LogicMonitor, ServiceNow, SSRS, SQL Server Management Studio (SSMS), SSIS, SQL Profiler
-
-### Scripting & Automation
-PowerShell, T-SQL, PL/SQL, Basic C#, .Net 8.0
-
-### Professional Skills
-Problem-solving, Communication, Cross-team collaboration., Decision making
-
+## Database Technologies
+MS SQL Server 2008-2022, MySQL, Oracle, PostgreSQL
+## Cloud & Infrastructure
+AWS RDS, AWS EC2, AWS S3, Terraform, AWS CloudWatch, GitHub Desktop,
+Windows Server, Linux (Basic)
+## Performance Tuning
+Query optimization, Index management, Execution plan analysis, Statistics, TempDB
+## Optimization
+Backup, Recovery & HA/DR
+AlwaysOn Availability Groups, Log Shipping, Backup and Restore, Failover Cluster
+## Scripting & Automation
+PowerShell, T-SQL, SQL Agent
+## Monitoring & Database Tools
+PgAdmin, LogicMonitor, ServiceNow, SSRS, SQL Server Management Studio
+(SSMS), SSIS, SQL Profiler
+## Professional Experience
+## Tata Consultancy Services Ltd
+SQL Database Administrator
+## 13th Dec 2021 – Present
+## Kolkata, West Bengal
+Administered 200+  SQL  Server instances  (2012–2022)  across production, UAT,  on-prem, and AWS  environments -  supporting provisioning,
+installation, and configuration.
+Performed 10+ database version upgrade and migration from (2012/2014/2016) to 2019/2022), handling validation, cutover execution, and post-
+migration checks.
+Performed patching cycles, CU deployments, login/security administration, and TDE configuration aligned with compliance standards.
+Performed routine and ad-hoc backup/restore requests, including PITR and non-production environment refreshes for multiple development teams.
+Implemented automated maintenance routines (index rebuilds, DBCC, validation) improving reliability across 100+ instances.
+Troubleshot performance issues using execution plans, DMVs, wait stats, and I/O analysis — driving 10–15% improvement in key workloads.
+Improved database performance through TempDB tuning, blocking/deadlock remediation, and query refinement for application teams.
+Automated daily health and job monitoring scripts using PowerShell/T-SQL reducing manual effort by 30–40% and improving response time.
+Managed 100+ SQL Server Agent jobs, including scheduling, alerting, and incident resolution workflows.
+Optimized storage footprint by purging/partitioning 1.5–2 TB datasets, reducing maintenance duration and space usage.
+Supported clustered/HA configurations and assisted in failover testing and readiness activities; familiar with AlwaysOn AGs, Failover Clusters
+Instance, and Log Shipping concepts.
+Support multi-platform databases including MySQL, PostgreSQL, and Oracle for provisioning, patching, and troubleshooting.
+Worked within ITIL framework for change/incident management, documented procedures, and delivered 24×7 on-call support.
+## Certifications & Trainings
+PostgreSQL DBA
+## RJP INFOTEK
+## 2025
+## 
+## Certificate Credential
+Oracle Database Administrator DBA
+## Udemy
+## 2024
+70-462: SQL Server Database Administration (DBA)
+## Udemy
+## 2022
 ## Education
-### Jharkhand Rai University, Ranchi
+## Jharkhand Rai University, Ranchi
 Bachelor of Computer Application
-July 2021
-Information Technology
-
-### Vivekananda Central School, Hazaribag
-Science
-June 2018
-
-## Projects
-### SA Password Rotation Automation
-April 2025
-* Automated SA password rotation across 100+ SQL Server instances using PowerShell and T-SQL.
-* Improved security compliance and eliminated manual effort in credential management.
-
-### ETL Automation Project
-Feb 2025
-* Developed automated ETL workflows using T-SQL, .NET 8.0 and C# to import multiple CSV and Excel files. Reduced manual data ingestion effort by 60% through automation
-* Streamlined data loading into various SQL Server tables across multiple databases
-
-## Certifications & Courses
-* The Complete Prompt Engineering for GenAI Bootcamp
-Udemy
-2025
-* 70-462: SQL Server Database Administration (DBA)
-Udemy
-2024
-* SQL Server Administration Parts 1–3
-Udemy
-2022–2023
-* Oracle Database Administrator DBA
-Udemy
-2023
-
+## Aug 2018 - Jul 2021
+## Computer & Information Technology
+## Vivekananda Central School, Hazaribagh
+## 12th Standard
+## May 2016 - Jun 2018
+Science (PCM)
 ## Awards & Recognition
-### Star Performer – Certificate of Excellence
+Star Performer – Certificate of Excellence
 TCS & Tapestry
-Jan 2025
+## Jan 2025
 Honored for outstanding contribution in SQL Server and RDS patching, along with successful storage optimization initiatives.
-
-### Star of the Month
-TCS
-Dec 2024
+Star of the Month
+## TCS
+## Dec 2024
 Awarded for exceptional dedication, ownership, and delivering impactful value additions to ongoing database operations.
-
-### Applause Award
-TCS
-May 2022
-Recognized for strong performance and quick learning as a fresher during the initial onboarding phase.
-
 ## Languages
-English
-
-Hindi
-
+## English
+## Hindi

@@ -41,7 +41,7 @@ const About = () => {
   const stats = [
     {
       icon: <FiBriefcase size={24} />,
-      value: '3+',
+      value: '4+',
       label: 'Years Experience',
       color: 'from-blue-500 to-blue-700',
     },
@@ -153,7 +153,7 @@ const About = () => {
                   )}
                   {typedLines >= 3 && (
                     <div className="text-pink-400 animate-fade-in">
-                      {'  '}@YearsExp = <span className="text-yellow-400">3+</span>,
+                      {'  '}@YearsExp = <span className="text-yellow-400">4+</span>,
                     </div>
                   )}
                   {typedLines >= 4 && (
@@ -246,11 +246,11 @@ const About = () => {
                     Professional Summary
                   </h3>
                   <p className="text-slate-400 text-base leading-relaxed">
-                    I'm a dedicated MS SQL Server Database Administrator with <span className="text-purple-400 font-semibold">3+ years of hands-on experience</span> at 
+                    I'm a dedicated MS SQL Server Database Administrator with <span className="text-purple-400 font-semibold">4+ years of hands-on experience</span> at 
                     <span className="text-blue-400 font-semibold"> Tata Consultancy Services (TCS)</span>. 
-                    I specialize in managing large-scale SQL Server environments across on-premises and 
-                    <span className="text-cyan-400 font-semibold"> AWS cloud platforms</span>, with expertise in 
-                    installation, migration, security management, backup & recovery, and performance tuning.
+                    I specialize in managing enterprise-scale SQL Server environments (200+ instances) across on-premises and 
+                    <span className="text-cyan-400 font-semibold"> AWS cloud platforms</span>, with deep expertise in 
+                    installation, version upgrades (2012-2022), migration, security hardening, backup & recovery, high availability, and performance tuning.
                   </p>
                 </div>
 
@@ -261,7 +261,7 @@ const About = () => {
                   </h3>
                   <p className="text-slate-400 text-base leading-relaxed">
                     Alongside core SQL Server expertise, I've also supported <span className="text-pink-400 font-semibold">MySQL, PostgreSQL, and Oracle</span> databases 
-                    at the L1 level — giving me strong cross-platform exposure and a comprehensive understanding of diverse database ecosystems.
+                    for provisioning, patching, monitoring, and troubleshooting — giving me strong cross-platform exposure and a comprehensive understanding of diverse database ecosystems. I've successfully automated routine DBA tasks using PowerShell and T-SQL, reducing manual effort by 30-40%.
                   </p>
                 </div>
 

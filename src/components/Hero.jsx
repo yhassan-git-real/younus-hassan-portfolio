@@ -24,7 +24,7 @@ const Hero = () => {
           {/* Subheading */}
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-slate-400 max-w-3xl mx-auto px-4">
             Crafting robust database solutions with{' '}
-            <span className="text-purple-400 font-semibold">3+ years</span> of expertise
+            <span className="text-purple-400 font-semibold">4+ years</span> of expertise
           </p>
 
           {/* Description */}
@@ -61,8 +61,8 @@ const Hero = () => {
               Get In Touch
             </a>
             <a 
-              href="/Younus_Hassan_Resume_MS-SQL_DBA.pdf" 
-              download="Younus_Hassan_Resume_MS-SQL_DBA.pdf"
+              href="/download/Younus_Hassan_SQL_DBA_Resume.pdf" 
+              download="Younus_Hassan_SQL_DBA_Resume.pdf"
               className="btn-primary flex items-center justify-center space-x-2 w-full sm:w-auto"
             >
               <FiDownload size={18} />
